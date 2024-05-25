@@ -7,7 +7,7 @@ const myTodo = [
 ];
 // เริ่มเขียนโค้ดตรงนี้
 
-myTodo.push({todo:"Walk the dog"})
+myTodo.push({id: 5,todo:"Walk the dog"})
 myTodo[3].todo = "Go to the gym"
 myTodo.pop()
-console.log(myTodo[3])
+console.log("To-do id: " + myTodo[3].id + ", " + myTodo[3].todo)

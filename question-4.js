@@ -7,17 +7,13 @@ const inventory = [
 
 // เริ่มเขียนโค้ดตรงนี้
 
-let dataQuantity = [];
-for (let i=0; i<inventory.length; i++){
-  dataQuantity.push(inventory[i].quantity)
+
+let minQuantity = inventory [0];
+
+for (let i=1; i<inventory.length; i++){
+  if(inventory[i].quantity < minQuantity.quantity){
+    minQuantity = inventory[i];
+  }
 }
-console.log(dataQuantity)
 
-
-function minQuantity (quantity){
-  return "สินค้าที่มีจำนวนต่ำที่สุดในคลังสินค้าคือ " + Math.min(...dataQuantity) + " ชิ้น"
-}
-let minData = minQuantity(dataQuantity);
-console.log(minData)
-
-//note : ใส่คำว่า banana ไม่เป็นที่ให้มันเปลี่ยนตาม min
+console.log( "สินค้าที่มีจำนวนต่ำที่สุดในคลังสินค้าคือ " + minQuantity.name + " ซึ่งมี " + minQuantity.quantity + " ชิ้น")

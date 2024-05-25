@@ -11,4 +11,4 @@ let sum = 0;
 for( let i=0; i<inventory.length; i++){
   sum = sum + ((inventory[i].quantity)*(inventory[i].price));
 }
-console.log("มูลค่ารวมของสินค้าทั้งหมดในสต๊อก " + sum)
+console.log("มูลค่ารวมของจำนวนสินค้าทั้งหมดในสต๊อก " + sum + " บาท")
